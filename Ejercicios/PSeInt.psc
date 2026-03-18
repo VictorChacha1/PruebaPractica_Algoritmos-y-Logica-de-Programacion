@@ -67,5 +67,8 @@ Algoritmo CompetenciaProgramacion
    Si observacion <> "" Entonces
       Escribir "Observacion: ", observacion
    FinSi
+  FinSi
+ FinSi
+FinSi
 FinAlgoritmo
 
