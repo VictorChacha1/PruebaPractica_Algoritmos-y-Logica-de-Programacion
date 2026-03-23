@@ -1,1 +1,44 @@
+Ejercicio 1
+1. Análisis del problema
+Se tiene una competencia donde un participante resuelve 3 retos. Se calcula su puntaje sumando los tres retos, 
+luego se restan puntos por errores y se suman bonificaciones si resolvió el desafío extra o si terminó en menos de 30 minutos. 
+Con ese puntaje final se le asigna un nivel. Si fue descalificado por copia, el nivel es Descalificado sin importar el puntaje.
+
+2. Entradas, procesos y salidas
+Entradas:
+-	puntaje1, puntaje2, puntaje3 (enteros)
+-	numErrores, tiempoTotal (enteros)
+-	desafioExtra, descalificado (char: S o N)
+
+Procesos:
+-	puntajeBase = puntaje1 + puntaje2 + puntaje3
+-	penalizacion = numErrores * 4
+-	bonificacion = 15 si resolvio extra + 10 si tiempo < 30
+-	puntajeFinal = puntajeBase - penalizacion + bonificacion
+-	Asignar nivel segun rango y verificar descalificacion
+
+Salidas:
+-	Puntaje base, penalizacion, bonificacion, puntaje final, nivel, observacion
+
+3. Algoritmo paso a paso
+1.	Inicio
+2.	Pedir puntaje del reto 1
+3.	Pedir puntaje del reto 2
+4.	Pedir puntaje del reto 3
+5.	Pedir numero de errores
+6.	Pedir tiempo total en minutos
+7.	Pedir si resolvio el desafio extra (S/N)
+8.	Pedir si fue descalificado por copia (S/N)
+9.	Calcular puntajeBase = puntaje1 + puntaje2 + puntaje3
+10.	Calcular penalizacion = numErrores * 4
+11.	Si resolvio el desafio extra, sumar 15 a la bonificacion
+12.	Si el tiempo es menor a 30 minutos, sumar 10 a la bonificacion
+13.	Calcular puntajeFinal = puntajeBase - penalizacion + bonificacion
+14.	Si puntajeFinal es menor a 0, dejarlo en 0
+15.	Segun el puntajeFinal asignar nivel: 0-29 Principiante, 30-49 Basico, 50-69 Intermedio, 70-89 Avanzado, 90 o mas Experto
+16.	Si fue descalificado por copia, el nivel pasa a ser Descalificado
+17.	Si puntajeFinal >= 70 y errores >= 5, mostrar observacion de resultado inconsistente
+18.	Mostrar puntaje base, penalizacion, bonificacion, puntaje final, nivel y observacion
+19.	Fin
+
 
